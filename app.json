@@ -1,0 +1,8 @@
+{
+  "name": "Infogreve",
+  "description": "Direito de greve do servidor publico",
+  "repository": "https://github.com/tiagostutz/infogreve",
+  "logo": "http://lookable.herokuapp.com/public/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
