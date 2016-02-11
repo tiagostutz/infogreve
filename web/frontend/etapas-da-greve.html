@@ -1,0 +1,55 @@
+{% extends "template.html" %}
+
+{% block menuselecionado %}menu_etapas_da_greve{% endblock %}
+
+{% block head %}
+<meta property="article:author" content="https://www.facebook.com/lorranne.oliveira.3">
+<meta property="article:publisher" content="https://www.facebook.com/infogreve">
+
+<script type="text/javascript" src="etapas-da-greve.html.js"></script>
+
+<link rel="stylesheet" type="text/css" href="etapas-da-greve.html.css"/>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Ek+Mukta:300,400' rel='stylesheet' type='text/css'>
+{% endblock %}
+{% block conteudo %}
+
+<div class="content">
+    <div style="margin-top: 50px">
+        <h3 class="legenda">Uma perspectiva temporal concebida e organizada por advogados que atuam em todas as etapas descritas abaixo</h3>
+    </div>
+    <div class="timeline-head">+ </div>
+    <div class="timeline section group" data-bind="foreach: etapas">
+
+        <div class="etapa section group" data-bind="css: { odd: $index()%2==0 }, style: {borderColor: color}">
+            <div class="section group grupo-conteudo">
+                <div class="bullet" style="padding-top: 13px;float: left;margin-left: -27px;margin-top: 2px;">
+                    <div style="position: relative;margin-left: -11px;font-size: 27px;background: white;color: white;border-radius: 28px;box-shadow: 1px 1px 1px white;height: 15px;width: 15px;padding-top: 5px;padding-left: 5px;border: 2px solid rgb(228, 228, 228);">
+                        <div style="background: rgb(228, 228, 228);border-radius: 53px;width: 10px;height: 10px;">
+                        </div>
+                    </div>
+                </div>
+                <h2 data-bind="text: nome" class="title"></h2>
+    	    
+                <div class="aplicativos" data-bind="foreach: aplicativos">
+                    <h3>
+                        <div data-bind="visible: carregado">
+                            <div class="aplicativo" onclick="jQuery(this).next().toggle()">
+                                <span data-bind="text: lista().length" style="color:#444"></span>
+                                <span data-bind="text: identificacao().nome"></span>
+                            </div>
+                            <ul data-bind="foreach: lista" style="display:none">
+                                <li> <span data-bind="text: $data.data != undefined ? data : ''"></span>
+                                     <a data-bind="text: titulo, attr: { href: $parent.identificacao().url + '/' + id }" target="_blank"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="images/ajax-loader.gif" data-bind="visible: carregado() == false"/>
+                    </h3>
+                </div>
+            </div>    
+        </div>
+
+	</div>
+
+</div> 
+{% endblock %}

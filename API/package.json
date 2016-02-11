@@ -1,0 +1,38 @@
+{
+  "name": "node-podio",
+  "version": "0.1.0",
+  "description": "NodeJS module to encapsulate the use of the Podio API",
+   "keywords": [
+    "nodejs",
+    "podio",
+    "API",
+    "javascript",
+    "js",
+    "wrapper",
+	"encapsulate",
+	"encapsulation"
+  ],
+  "main": "infogreve.js",
+  "dependencies": {
+   "podio-api": "0.x",
+  	"pushover-notifications": "0.x",
+    "express": "3.5.x",
+  	"path": "0.x",
+  	"request": "2.x",
+  	"mem-cache": "0.x",
+  	"querystring": "0.x",
+  	"nunjucks" : "1.x",
+    "async": "0.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stutzsolucoes/node-podio"
+  },
+  "author": "Stutz Marines",
+   "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ]
+}

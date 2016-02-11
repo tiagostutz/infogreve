@@ -1,0 +1,104 @@
+{% extends "template.html" %}
+
+{% block menuselecionado %}top_button{% endblock %}
+
+{% block head %}
+<script type="text/javascript" src="emergencia.html.js"></script>
+<link rel="stylesheet" type="text/css" href="emergencia.html.css"/>
+{% endblock %}
+{% block conteudo %}
+
+    <!-- maincontent Starts -->
+    <div class="content">
+        <h2 class="legenda" style="text-align: center; margin-top: 30px">
+            Dentro de <span style="font-weight: 200">10 minutos</span> um advogado te ligará para ajudar.<br />
+            <p class="texto_ajuda">
+                Informe resumidamente por meio do formulário abaixo o que está acontecendo  e você receberá em até 10 minutos o suporte jurídico de um profissional especializado em Direito de Greve do Servidor Público. 
+            </p>
+        </h2>
+
+         <form id="emergencia-form" action="https://stutzsolucoes-prod.apigee.net/ceradv/emergencia/" method="POST">
+            <!--
+            <input type="hidden" name="token_rdstation" value="3d69043302eb44d8bb2a5c3fa34b4bca" />
+            <input type="hidden" name="identificador" value="infogreve_emergencia" />
+            -->
+            <div class="section group">
+                <div class="field">
+                    <label class="col span_4_of_12" for="infogreve_emergencia_nome">Seu nome:</label>
+                    <input class="col span_6_of_12" name="infogreve_emergencia_nome" type="text" placeholder="Com quem o advogado falará?" autofocus required/>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="field">
+                    <label class="col span_4_of_12" for="infogreve_emergencia_email" >Seu e-mail:</label> 
+                    <input class="col span_6_of_12" name="infogreve_emergencia_email" type="email" placeholder="Para onde o advogado deve enviar mais informações?" required/>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="field">
+                    <label class="col span_4_of_12" for="infogreve_emergencia_tel">Telefone com DDD: </label>   
+                    <input class="col span_6_of_12" name="infogreve_emergencia_tel" type="tel" placeholder="Para qual telefone o advogado deve ligar? " required/><div class="clear"></div>
+                </div>
+
+                <div class="field">
+                    <label class="col span_4_of_12" for="infogreve_emergencia_mensagem">O que está acontecendo?</label>
+                    <textarea class="col span_6_of_12 mensagem" rows="10" name="infogreve_emergencia_mensagem" placeholder="Descreva a situação" required></textarea>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="actions section group" align="right" style="margin-top: 20px;">
+                <div class="col span_4_of_12"></div>
+                <input id="submit-button" type="submit" id="cf_submit" value="Enviar pedido de ajuda" class="emergencia-button col span_6_of_12" onclick="alert('Obrigado! Seu pedido foi enviado.')"/>
+                <div class="clear"></div>
+            </div>
+            
+        </form> 
+		
+        <script>
+            $("#emergencia-form").submit(function(e)
+            {
+                $("#submit-button").attr("value", "Aguarde. Enviando solicitação...");
+                $("#submit-button").attr("disabled", "disabled");
+                $("#submit-button").addClass("button-busy");
+                var postData = $(this).serializeArray();
+                var formURL = $(this).attr("action");
+                $.ajax(
+                {
+                    url : formURL,
+                    type: "POST",
+                    data : postData,
+                    success:function(data, textStatus, jqXHR) 
+                    {
+                        $("#submit-button").attr("value", "Em 10 minutos o contato será feito.");
+                        $("#submit-button").addClass("button-success");
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) 
+                    {
+                      $("#submit-button").attr("value", "Erro ao enviar solciitação");
+                      $("#submit-button").removeAttr("disabled");
+                      $("#submit-button").addClass("button-error");
+                      alert(textStatus);
+                    }
+                });
+                e.preventDefault(); //STOP default action
+            });
+        </script>
+		
+        <p class="texto_ajuda" align="right" style="margin-top: 30px">
+			Nessa época de greve, é comum a exigência que você tome decisões importantes para si e para a categoria dos servidores, mas a incerteza das consquências dessas decisões pode te deixar inseguro sobre qual caminho seguir. <strong>Não se preocupe, esse apoio jurídico especializado te ajudará a tomar decisões mais conscientes e seguras. </strong>
+        </p>
+        
+         <!-- AddThis Button BEGIN -->
+		<div class="addthis_toolbox addthis_default_style">
+		<a class="addthis_button_google_plusone" g:plusone:size="medium" ></a>		
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+		</div>
+		<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5381070702e33c8f"></script>
+		<!-- AddThis Button END -->
+        
+    </div>
+<!-- maincontent ends -->
+{% endblock %}

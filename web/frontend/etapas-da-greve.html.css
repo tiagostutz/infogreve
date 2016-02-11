@@ -1,0 +1,88 @@
+.timeline,
+.timeline h2,
+.timeline h3 {
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+
+}
+
+.timeline .etapa {
+    background: white;
+    border-left: 4px solid #C5BEEB;
+}
+.timeline .odd {
+    background: #FAFAFA;
+}
+
+.timeline h2, .timeline .aplicativos {
+    margin-right: 10px;
+}
+.timeline .aplicativos {
+    padding-bottom: 10px;
+}
+.timeline h2 {
+    color: black;
+    padding-top: 10px;
+    font-size: 26px;
+    color: #c8372f;
+}
+.timeline-head {
+    background: #F5F5F5;
+    box-shadow: 0px 3px 2px -2px #AAA;
+    padding: 10px 12px;
+    margin-bottom: 1px;
+    z-index: 999;
+    position: relative;
+}
+.timeline-head {
+    text-shadow: 1px 1px 1px white;
+    font-size: 18px;
+}
+
+.timeline .grupo-conteudo{
+   border-left: 1px solid #DDD; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    padding-left: 25px;
+}
+.timeline .aplicativos .aplicativo {
+    cursor: pointer;
+}
+.timeline .aplicativos .aplicativo:hover {
+    color: black;
+}
+.timeline .aplicativos ul li {
+    margin-left: 7px;
+    background: #EEE;
+    margin-bottom: 7px;
+}
+
+.timeline .aplicativos ul {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DDD;
+}
+
+.timeline .aplicativos ul li:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 480px) {
+    .timeline .aplicativos .aplicativo {
+        padding: 9px;
+        padding-right: 3px;
+        background: #EEE;
+        margin-bottom: 7px;
+        margin-right: 5px;
+    }   
+    .timeline .grupo-conteudo { 
+        border: 0px;
+        margin-left: 0px;
+        padding-left: 20px;        
+    }
+    .timeline .grupo-conteudo .bullet {
+        display: none;
+    }
+}

@@ -1,0 +1,164 @@
+{% extends "template.html" %}
+
+{% block menuselecionado %}home_botton{% endblock %}
+
+{% block head %}
+<script type="text/javascript" src="index.html.js"></script>
+
+<style>
+    .sobre_info {
+        padding: 35px 0 0px 0;
+    }
+    .content h2, .content h3, .sobre_info h2, .sobre_info h3 {
+        font-family: 'Ubuntu', 'sans-serif';
+        font-size: 29px;
+        color: #C8372F;
+        padding: 0px 0 15px 0;
+        margin: 0;
+        font-weight: 400;
+    }
+    .content h3, .sobre_info h3 {
+        font-size: 23px;
+    }
+    .content p, .sobre_info p {
+        font-family: 'Ubuntu', 'sans-serif';
+        font-size: 16px;
+        color: #000;
+        padding: 0 0 15px 0;
+        margin: 0;
+    }
+    .content .number,.sobre_info h2 span{
+        color: #AAA;
+    }
+    .reivindcacao h4 {
+        font-size: 10px;
+        font-weight: 800;
+        padding: 2px 0 5px 7px;
+        float: left;
+    }
+    .reivindcacao {padding: 20px 0px;}
+
+    .bxslider-loading {
+        width: 100%; 
+        text-align: center;
+        padding: 30px;
+    }
+</style>
+{% endblock %}
+{% block conteudo %}
+
+    <!-- maincontent Starts --> 
+    <div class="slide_block">
+        <div class="bxslider-loading">  
+            <img src="images/ajax-loader.gif"/>
+        </div>
+        <ul class="bxslider" data-bind="foreach: destaques">
+            <!-- ko if: $index() <= 3 -->
+            <li><img src="images/slider-img.jpg" width="917" alt="slider-img" />
+                <div class="slider_in">
+                    <h2 data-bind="text: titulo"></h2>
+                    <p data-bind="text: chamada"></p>
+                    <a data-bind="attr: { href: 'noticias.html#!/' + id }">Saiba mais</a>
+                </div>
+            </li>
+            <!-- /ko -->
+        </ul>
+    </div>
+    <div class="greve" data-bind="foreach: destaques">
+        <div class="bxslider-loading">  
+            <img src="images/ajax-loader.gif"/>
+        </div>
+        <!-- ko if: $index() === 0 -->
+        <h2 data-bind="text: titulo"></h2>
+        <p data-bind="text: chamada"></p>
+        <a data-bind="attr: { href: 'noticias.html#!/' + id }">Saiba mais</a>
+        <!-- /ko -->
+    </div>
+
+    <div class="main_content">
+        <div class="content">
+            <div class="precisando">
+                <h2>Precisando de ajuda?</h2>
+                <p>A partir de <strong> agora</strong> você tem um canal ágil, seguro e confiável para requisitar apoio jurídico a profissionais especializados em <strong>Direito de greve de servidores públicos</strong> quando estiver em uma situação de emergência, insegurança ou incerteza.
+                </p>
+                <p><a href="emergencia.html">Solicitar ajuda</a></p>
+            </div>
+            
+            <div class="precisando">
+                <h2>Condução da greve</h2>
+                <p class="ital">"Qual seria a finalidade de se conduzir uma greve? Encerrá-la! Embora pareça confusa a assertiva, conforme se percebeu dos artigos anteriores, a greve não é um fim em si mesma, mas..."</p>
+                <p><a href="entenda-a-greve.html#topico_148122811">Continuar lendo</a></p>
+            </div>
+            
+            <div class="precisando last">
+                <h2>Fatos Relevantes</h2>
+                <p data-bind="text: currentDestaque().chamada"></p>
+                <p><a data-bind="attr: { href: 'noticias.html#!/' + currentDestaque().id }">Saiba mais</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="download_block">
+            <div class="download">
+              
+                <small><img src="images/comes-here-img.png" alt="comeshere" /></small>
+                <h3>Download do Panfleto InfoGreve.</h3>
+                <span>Versões para <a href="/downloads/panfleto-infogreve_pb.png" target="_blank">Impressão doméstica</a>, <a href="/downloads/Panfleto-InfoGreve.tif" target="_blank">impressão em gráfica</a> e para <a href="/downloads/Panfleto-InfoGreve.jpg" target="_blank">divulgação digital via e-mail, redes sociais e blogs</a>.</span>
+                <div class="clear"></div>
+            </div> 
+        </div> 
+
+        <div class="blog">
+            <div class="blog_left" >
+                <h3>Etapas da greve </h3>
+                <h4>Saiba o que acontece em cada fase</h4>
+                <img src="images/resimg.png" alt="img" />
+                <p>As greves possuem uma ordem cronológica e você precisa saber o que acontece em cada uma dessas etapas. Além dessas informações, nessa seção você também poderá baixar modelos de documentos que são imprescindíveis no processo </p>
+                <a href="etapas-da-greve.html">Saiba mais</a>                        
+            </div>
+            <div class="blog_right">
+                <small><img src="images/blog-img1.jpg" alt="blogimg" /></small>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="blog_change">
+            <div class="blog_change_left">
+                <small><img src="images/blog-img2.jpg" alt="blogimg" /></small>
+            </div>
+            <div class="blog_change_right">
+                <h3>Manutenção dos serviços públicos essenciais </h3>
+                <h4>Conheça as restrições</h4>
+                <img src="images/resimg.png" alt="img" />
+                <p>Embora o costume sugira manter em serviço pelo menos 30% da força de trabalho durante as greves de servidores públicos, esta regra não consta na Lei 7.783, de 1989.</p>
+                <a href="entenda-a-greve.html#topico_9">Saiba mais</a>                        
+            </div>
+            <div class="clear"></div>
+        </div> 
+        <div class="blog tops">
+            <div class="blog_left">
+                <h3>Lei 7.783, de 1989 </h3>
+                <h4>Por dentro da lei</h4>
+                <img src="images/resimg.png" alt="img" />
+                <p>Art. 1º É assegurado o direito de greve, competindo aos trabalhadores decidir sobre a oportunidade de exercê-lo e sobre os interesses que devam por meio dele defender.</p>
+                <a href="o-que-diz-a-lei.html">Saiba mais</a>                        
+            </div>
+            <div class="blog_right">
+                <small><img src="images/blog-img3.jpg" alt="blogimg" /></small>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="info_grave">
+            <p>
+                O <span>InfoGreve</span> é um produto patrocinado por <em><a href="http://cer.adv.br" target="_blank">Cassel &amp; Ruzzarin Advogados</a>,</em> que defende servidores públicos do concurso à aposentadoria
+            </p>
+            <div class="logo-area">
+                <a href="http://cer.adv.br" target="_blank">
+                    <img src="http://www.direitodosconcursos.com.br/wp-content/uploads/2013/08/logoimg.png" width="140">
+                </a>
+            </div>
+            <div style="clear:both"></div>
+        </div>        
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "template.html" %}
+
+{% block menuselecionado %}menu_noticias{% endblock %}
+
+{% block head %}
+<meta property="article:author" content="https://www.facebook.com/ruzzarin">
+<meta property="article:publisher" content="https://www.facebook.com/infogreve">
+
+<script type="text/javascript" src="noticia.html.js"></script>
+
+<script type="text/javascript">
+                
+</script>
+
+{% endblock %}
+{% block conteudo %}
+
+<div class="content">
+    <div class="listagem-loading">  
+        <div><img src="images/ajax-loader.gif"/></div>
+        <h3 class="legenda" style="color: #AAA; font-size: 18px;">Carregando a notícia completa.</h3>
+    </div>
+    <div class="listagem" data-bind="with: noticia">
+	    <div style="margin-top: 50px"></div>
+
+        <div data-bind="attr: { id: id }" style="border-bottom: 1px dotted #AAA; margin-bottom: 30px; padding-bottom: 20px">
+            <h2 class="legenda"><span data-bind="text: titulo"></span></h2>
+            <p data-bind="text: chamada" style="color: #F5AC5D; font-size: 15px"></p>
+            <p data-bind="text: data" style="color: #BBB; font-size: 15px; padding: 0px"></p>            
+            <div data-bind="html: texto"></div>
+	            
+            <p style="font-size: 13px; color: gray">Fonte: <a data-bind="text: fonte, attr: { href: link}" target="_blank"></a></p>
+<!-- <!--    AddThis Button BEGIN --> -->
+<!--              <div data-bind="attr:{id:id}" class="addthis_toolbox addthis_default_style"> -->
+<!--                 <a class="addthis_button_google_plusone" g:plusone:size="medium"></a> -->
+<!--                 <a class="addthis_button_tweet"></a> -->
+<!--                 <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>  -->
+<!--               </div> -->
+<!--             <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script> -->
+<!--             <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5381070702e33c8f"></script> -->
+<!-- <!--    AddThis Button END -->             -->
+        </div>
+
+	</div>
+    <div class="relacionadas">
+        
+    </div>
+
+</div> 
+
+{% endblock %}

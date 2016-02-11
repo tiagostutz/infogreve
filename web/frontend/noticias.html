@@ -1,0 +1,164 @@
+{% extends "template.html" %}
+
+{% block menuselecionado %}menu_noticias{% endblock %}
+
+{% block head %}
+<meta property="article:author" content="https://www.facebook.com/ruzzarin">
+<meta property="article:publisher" content="https://www.facebook.com/infogreve">
+
+<script type="text/javascript" src="noticias.html.js"></script>
+<script type="text/javascript" src="/js/social.js"></script>
+
+<style type="text/css">
+    .listagem-loading {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 2em;
+        right: 0px;
+        text-decoration: none;
+        color: #000000;
+        background-color: rgba(235, 235, 235, 0.80);
+        font-size: 12px;
+        padding: 1em;
+        display: none;
+    }
+
+    .back-to-top:hover {    
+        background-color: rgba(135, 135, 135, 0.50);
+    }
+    
+    .div_outer {
+     height: 100px;
+    overflow:hidden;
+}
+
+
+</style>
+<script type="text/javascript">
+
+function exibeFullDiv(item, event){
+	
+	jQuery('#'+item).animateAuto("height", 1000);
+}
+    jQuery(document).ready(function() {
+        var offset = 220;
+        var duration = 500;
+        jQuery(window).scroll(function() {
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery('.back-to-top').fadeIn(duration);
+            } else {
+                jQuery('.back-to-top').fadeOut(duration);
+            }
+        });
+        
+        jQuery('.back-to-top').click(function(event) {
+            event.preventDefault();
+            
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            
+            return false;
+        })
+       
+        
+        
+        jQuery.fn.animateAuto = function(prop, speed, callback){
+    	    var elem, height, width;
+    	    return this.each(function(i, el){
+    	        el = jQuery(el), elem = el.clone().css({"height":"auto","width":"auto"}).appendTo("body");
+    	        height = elem.css("height"),
+    	        width = elem.css("width"),
+    	        elem.remove();
+    	        
+    	        if(prop === "height")
+    	            el.animate({"height":height}, speed, callback);
+    	        else if(prop === "width")
+    	            el.animate({"width":width}, speed, callback);  
+    	        else if(prop === "both")
+    	            el.animate({"width":width,"height":height}, speed, callback);
+    	    });  
+    	}
+        
+       
+
+        
+    });
+</script>
+{% endblock %}
+{% block conteudo %}
+
+<div class="content">
+    <div class="listagem-loading">  
+        <div><img src="images/ajax-loader.gif"/></div>
+        <h3 class="legenda" style="color: #AAA; font-size: 18px;">Recuperando as notícias mais recentes sobre o movimento de greve dos servidores públicos que estão circulando nas mídias.</h3>
+    </div>
+    <div class="listagem" >
+	    <div style="margin-top: 50px">
+	        <h3 style="color: #DDD" class="legenda">Fatos recentes relacionados a greve de servidores públicos que foram noticiados. </h3>
+	    </div>
+	    
+	    <div  data-bind="foreach: listaNoticias ">
+	    		<article>  
+            <div  data-bind="attr: { id: 'noticia_' + id }" class="section group article">
+    	        <div data-bind="attr: { id: '!/'+ id }" class="col span_2_of_3">
+    	        	
+                    <a data-bind="attr : { href : 'noticia.html#!/' + tituloUrl + '/' + id}" target="_blank">
+        	            <h2 class="legenda">
+                            <span class="number">#<span data-bind="text: ($index() + 1)">1</span></span> <span data-bind="text: titulo"></span>                        
+                        </h2>
+                    </a>
+    	            
+    	            <div class="fase-tag">
+           				<h4 data-bind="css: { active: isFaseReinvindicacao, disabled: !isFaseReinvindicacao()}">reivindicação</h4>
+           				<h4 data-bind="css: { active: isFaseDeflagracao, disabled: !isFaseDeflagracao()}">deflagração</h4>
+           				<h4 data-bind="css: { active: isFaseConducao, disabled: !isFaseConducao()}">condução</h4>
+           				<h4 data-bind="css: { active: isFaseEncerramento, disabled: !isFaseEncerramento()}">encerramento</h4>
+           
+           				<div class="clear"></div>
+        			</div>
+    	            
+    	            <p data-bind="text: chamada" style="color: #F5AC5D; font-size: 15px"></p>
+                    <p data-bind="text: data" style="color: #BBB; font-size: 15px; padding: 0px"></p>
+                    
+                    
+                    <div class="div_outer" data-bind="attr:{id:'div_outer_noticia_'+id}">
+	    	            <div data-bind="html:texto"></div>
+	    	            
+                        <p style="font-size: 13px; color: gray">Fonte: <a data-bind="text: fonte, attr: { href: link}" target="_blank"></a></p>
+<!--                         AddThis Button BEGIN -->
+
+						
+						
+                         <div data-bind="attr:{id:id}" class="addthis_toolbox addthis_default_style">
+                            <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                            <a class="addthis_button_tweet" fb:like:href="'/noticias.html#!/'+appItemId"></a>
+                            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> 
+                          </div>
+                        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5381070702e33c8f"></script>
+<!--                         AddThis Button END -->
+	                </div>
+                    <button style="align:right" data-bind="click:expandeDiv">Continuar Lendo...</button>
+                    
+    	        </div>
+    	        
+    	        <div  class="addon-area col span_1_of_4">
+                   <h2>Tópicos Relacionados</h2>
+                      <ul data-bind="foreach: topicos">
+                     <li> <a data-bind="text: title, attr: { href: '/entenda-a-greve.html#!/' + appItemId}"target="_blank"></a></li>
+                      </ul>
+            	</div>
+            	<div class="clear"></div>
+    	        
+
+            </div>
+      </article>  
+            
+	    </div>
+	</div>
+</div> 
+<a href="#" class="back-to-top">Voltar ao início</a>
+{% endblock %}

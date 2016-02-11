@@ -1,0 +1,107 @@
+.etenda_block_in {
+        padding: 0px;
+    }
+    .block div {
+        cursor: pointer;
+    }
+    .block div:hover .block_text {
+        color: yellow;
+    }
+    .topicos-listagem-loading {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 2em;
+        right: 0px;
+        text-decoration: none;
+        color: #000000;
+        background-color: rgba(235, 235, 235, 0.80);
+        font-size: 12px;
+        padding: 1em;
+        display: none;
+    }
+
+    .back-to-top:hover {    
+        background-color: rgba(135, 135, 135, 0.50);
+    }
+
+    .addon-area ul li div.resposta {
+        padding: 7px; 
+        background: #C04C47; 
+        box-shadow: 1px 1px 6px -2px black inset;
+        color: white;
+        width: 100%; 
+        margin-top: -1px;
+    }
+    .addon-area ul li div.resposta p{
+        color: white;
+        font-family: 'Droid Sans', helvetica;
+        font-size: 14px;
+    }
+    .addon-area ul li div.resposta button,
+    .addon-area ul li div.resposta input[type="submit"] {
+        color: #000;
+        background: #FFF;
+        text-align: center;
+        padding: 5px 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: 1px 1px 1px;
+        -webkit-box-shadow: 1px 1px 1px;
+        box-shadow: 1px 1px 1px;
+        width: 50%;
+        border: 0px;
+		cursor: pointer;
+    }
+    .addon-area ul li div.resposta input[type="text"],
+    .addon-area ul li div.resposta input[type="email"] {
+        padding: 4px 9px;
+        border: 1px solid #FFF;
+        box-shadow: 0px 1px 3px 0px #808080 inset;
+        border-radius: 3px;
+        margin-bottom: 4px;
+        width: 85%;
+    }
+    .addon-area ul li div.resposta  .mensagem-conversao {
+        line-height: 120%;
+        margin-top: 10px;
+        text-align: right;
+        font-size: 13px;
+    }
+    .addon-area ul li a.selected {
+        background: #C8372F;
+        color: #FFF;
+        padding: 5px;
+    }
+    .addon-area ul li div.resposta input[type="submit"].button-success {
+        background: green;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        top: 0;
+        left: 0;
+        color: white;
+    }
+
+    .formulario-quer-saber-mais {
+        padding: 11px;
+        background: #F7F7F7;
+        text-shadow: 1px 1px #FFF;
+    }
+.formulario-quer-saber-mais h2{
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.formulario-quer-saber-mais input[type="text"],
+.formulario-quer-saber-mais input[type="email"],
+.formulario-quer-saber-mais input[type="submit"] {
+    padding: 5px;
+    font-size: 15px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}

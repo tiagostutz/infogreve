@@ -1,0 +1,144 @@
+{% extends "template.html" %}
+
+{% block menuselecionado %}menu_contato{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="contato.html.css"/>
+{% endblock %}
+{% block conteudo %}
+<div class="content">
+
+	<h2 class="legenda" style="text-align: center; margin-top: 30px">
+            Um canal aberto e direto com nossa equipe.<br />
+            <p class="texto_ajuda">
+                Preencha os campos abaixo com sua mensagem e separaremos uma pessoa de nossa equipe para atenter seu contato. 
+            </p>
+     </h2>
+	 
+ 	<form name="form" id="conversion-form" action="https://www.rdstation.com.br/api/1.2/conversions" method="POST">
+		<input type="hidden" name="token_rdstation" value="3d69043302eb44d8bb2a5c3fa34b4bca" />
+		<input type="hidden" name="identificador" value="contato-infogreve" />
+		
+		<div class="section group">
+			<div class="field">
+				<label class="col span_4_of_12" for="nome">Nome:</label>
+				<input class="col span_6_of_12" name="nome" type="text" placeholder="Seu Nome..." autofocus	required/> <br>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="field">
+				<label class="col span_4_of_12" for="email_lead">E-mail:</label>
+				<input class="col span_6_of_12" name="email_lead" type="email" placeholder="Seu e-mail..." required/> <br>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="field">
+				<label class="col span_4_of_12" for="ddd-telefone">Telefone:</label> 
+				<input class="col span_6_of_12" name="ddd-telefone" type="tel" placeholder="(00) 0000-0000" /> <br>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="field">
+				<label class="col span_4_of_12" for="mensagem">Mensagem:</label>
+				<textarea class="col span_6_of_12 mensagem" rows="10" name="mensagem" placeholder="Mensagem..."></textarea>
+				<div class="clear"></div>
+			</div>
+			
+		</div>
+		
+		<div class="actions" align="right" style="margin-top: 20px;">
+			<div class="col span_4_of_12"></div>
+			<input type="hidden" name="c_utmz" id="c_utmz" value="" />
+			<script type="text/javascript">
+				function read_cookie(a){var b=a+"=";var c=document.cookie.split(";");for(var d=0;d<c.length;d++){var e=c[d];while(e.charAt(0)==" ")e=e.substring(1,e.length);if(e.indexOf(b)==0){return e.substring(b.length,e.length)}}return null}try{document.getElementById("c_utmz").value=read_cookie("__utmz")}catch(err){}
+			</script>
+			<input class="col span_6_of_12" type="submit" id="cf_submit" value="Enviar mensagem"/>
+			<div class="clear"></div>
+		</div>
+		
+	</form> 
+</div>
+
+<script type="text/javascript" src="//rdstation-static.s3.amazonaws.com/js/jquery.form/2.02/jquery.form.js"></script>
+<script>
+
+			
+			
+            function createCookie(a, b, c) {
+			    if (c) {
+			        var d = new Date;
+			        d.setTime(d.getTime() + c * 24 * 60 * 60 * 1e3);
+			        var e = "; expires=" + d.toGMTString()
+			    } else var e = "";
+			    document.cookie = a + "=" + b + e + "; path=/"
+			}
+
+			function readCookie(a) {
+			    var b = a + "=";
+			    var c = document.cookie.split(";");
+			    for (var d = 0; d < c.length; d++) {
+			        var e = c[d];
+			        while (e.charAt(0) == " ") e = e.substring(1, e.length);
+			        if (e.indexOf(b) == 0) return e.substring(b.length, e.length)
+			    }
+			    return null
+			}
+
+			function eraseCookie(a) {
+			    createCookie(a, "", -1)
+			}
+
+			function saveConversion() {}
+
+			function setUtmzVal() {
+			    try {
+			        var a = readCookie("__utmz");
+			        $("input[type=hidden][name=c_utmz]").val(a)
+			    } catch (b) {}
+			}
+
+			function conversionSuccess(a) {
+				$("#cf_submit").attr("value", "Mensagem foi enviada com sucesso.");				
+                $("#cf_submit").addClass("button-success");
+			}
+
+			function conversionError(a) {
+			    $("#cf_submit").attr("value", "Erro ao enviar solciitação");
+            	$("#cf_submit").removeAttr("disabled");
+              	$("#cf_submit").addClass("button-error")
+			}
+
+			function parseRDR(a) {}
+
+			function preSubmit() {
+			    $("#cf_submit").attr("value", "Aguarde. Enviando solicitação...");
+                $("#cf_submit").attr("disabled", "disabled");
+                $("#cf_submit").addClass("button-busy");
+			    return true
+			}
+
+			function ajaxCb(a) {
+			    if (a.status === 200) {
+			        conversionSuccess(a)
+			    } else {
+			        conversionError(a)
+			    }
+			}
+			if (typeof console == "undefined" || typeof console.log == "undefined") var console = {
+			    log: function () {}
+			};
+			
+			$(document).ready(function (a) {
+			    setUtmzVal();
+			    var d = $("#conversion-form").attr("action") + ".js";
+			    var e = {
+			        url: d,
+			        type: "GET",
+			        dataType: "script",
+			        beforeSubmit: preSubmit,
+			        complete: ajaxCb
+			    };
+			    $("#conversion-form").ajaxForm(e)
+			});
+ </script>
+{% endblock %}

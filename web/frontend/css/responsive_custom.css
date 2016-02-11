@@ -1,0 +1,70 @@
+@media only screen and (max-width:524px){
+	.home_botton {display:none;}
+	.navigation ul li a.menu_home {
+        display:block;
+    }	
+    div.article-main-area {
+	    float:none; 
+	    width: 90%;
+	}
+	.addon-area {
+	    background: #EEE;
+	    padding-left: 15px;
+	    margin-left: 0px;
+	    width: 90%;
+	}
+	.addon-area  h2{
+	    font-family: Georgia;
+	    color: #888;
+	    font-size: 21px;
+	    font-weight: normal;
+	    text-align: left;
+	    margin-top: 15px;
+	    margin-bottom: 4px;
+	}
+	.addon-area ul {
+	    margin-left: 0px;
+	}
+	.addon-area ul li {
+	    color: #FFC4C0;
+		font-family: 'Ubuntu';
+		font-weight: 400;
+		font-size: 15px;
+		list-style: none;
+		line-height: 150%;
+		padding: 5px;
+		background: #FFF;
+		margin-right: 15px;
+		border-right: 6px solid #C8372F;
+		border-radius: 0px 05px 15px 0px;
+		box-shadow: 1px 1px 4px -2px #444;
+		margin-bottom: 10px;
+	}
+	.addon-area ul li a,
+	.addon-area ul li a:link,
+	.addon-area ul li a:visited,
+	.addon-area ul li a:active {
+	    color: #C8372F;
+	}
+	.addon-area ul li a:hover {
+	    text-decoration: underline;
+	}
+	.fase-tag em {
+		display: none;
+	}
+	.fase-tag h4 {
+		float: left;
+		width: 43%;
+		margin-bottom: 5px;
+	}
+
+	.info_grave p {
+	    padding: 0px;
+	    width: 100%;
+	    float: none;
+	}
+	.info_grave div.logo-area {
+	    width: 100%;
+	    float: none;
+	}
+}

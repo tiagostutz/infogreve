@@ -1,0 +1,172 @@
+{% extends "template.html" %} {% block menuselecionado
+%}menu_o_que_diz_a_lei{% endblock %} {% block head %}
+<script type="text/javascript" src="o-que-diz-a-lei.html.js"></script>
+
+<style type="text/css">
+.listagem-loading {
+	width: 100%;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.back-to-top {
+	position: fixed;
+	bottom: 2em;
+	right: 0px;
+	text-decoration: none;
+	color: #000000;
+	background-color: rgba(235, 235, 235, 0.80);
+	font-size: 12px;
+	padding: 1em;
+	display: none;
+}
+
+.back-to-top:hover {
+	background-color: rgba(135, 135, 135, 0.50);
+}
+</style>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		var offset = 220;
+		var duration = 500;
+		jQuery(window).scroll(function() {
+			if (jQuery(this).scrollTop() > offset) {
+				jQuery('.back-to-top').fadeIn(duration);
+			} else {
+				jQuery('.back-to-top').fadeOut(duration);
+			}
+		});
+
+		jQuery('.back-to-top').click(function(event) {
+			event.preventDefault();
+			jQuery('html, body').animate({
+				scrollTop : 0
+			}, duration);
+			return false;
+		})
+	});
+</script>
+<link rel="stylesheet" type="text/css" href="o-que-diz-a-lei.html.css" />
+{% endblock %} {% block conteudo %}
+
+<div class="content">
+	<div class="listagem-loading">
+		<div>
+			<img src="images/ajax-loader.gif" />
+		</div>
+		<h3 class="legenda" style="color: #AAA; font-size: 18px;">
+			Consultando e montando catálogo de informações jurídicas e
+			legislativas acerca do assunto greve. <br />Confira a seguir leis,
+			jurisprudências e proposições legislativas sobre o assunto.
+		</h3>
+	</div>
+
+	<div class="listagem">
+		<div style="margin-top: 50px">
+			<h3 class="legenda">Catálogo de informações jurídicas e
+				legislativas devidamente selecionado por advogados especialistas na
+				área</h3>
+		</div>
+
+		<div class="section group">
+			<div>// Qual tipo? Selecione abaixo para filtrar a listagem</div>
+			<div class="section group categorias">
+				<!-- ko foreach: tipos -->
+				<a class="col span_1_of_3"
+					data-bind="css: { selected : selecionado() }, click: toggle, attr: { href: '#!/' + nome}">
+					<div data-bind="text: nome"></div>
+					<div data-bind="text: descricao" class="descricao"></div>
+				</a>
+				<!-- /ko -->
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div>
+			<div id="filtros">
+				<h2>Filtros</h2>
+					<div id="filtroFase">
+						<h4>Fases</h4>
+						<ul>
+							<li><input type="checkbox" value="1" id="fase_1" onChange="filtraPorFaseTopico(this)" />reivindicação</li>
+							<li><input type="checkbox" value="2" id="fase_2" onChange="filtraPorFaseTopico(this)"/>deflagração</li>
+							<li><input type="checkbox" value="3" id="fase_3" onChange="filtraPorFaseTopico(this)" />condução</li>
+							<li><input type="checkbox" value="4" id="fase_4" onChange="filtraPorFaseTopico(this)" />encerramento</li>
+						</ul>
+					</div>
+					
+					<div id="filtroTopico">
+						<h4>Tópicos</h4>
+						<ul>
+							<li><input type="checkbox" value="2" id="topico_2" onChange="filtraPorFaseTopico(this)" />O que é a greve?</li>
+							<li><input type="checkbox" value="3" id="topico_3" onChange="filtraPorFaseTopico(this)"/>Greve de servidores para OIT</li>
+							<li><input type="checkbox" value="4" id="topico_4" onChange="filtraPorFaseTopico(this)" />Direito de greve do servidor público</li>
+							<li><input type="checkbox" value="5" id="topico_5" onChange="filtraPorFaseTopico(this)" />Greve e negociação coletiva</li>
+							<li><input type="checkbox" value="6" id="topico_6" onChange="filtraPorFaseTopico(this)" />Deflagração da greve</li>
+							<li><input type="checkbox" value="7" id="topico_7" onChange="filtraPorFaseTopico(this)"/>Manutenção dos serviços essenciais</li>
+							<li><input type="checkbox" value="8" id="topico_8" onChange="filtraPorFaseTopico(this)" />Condução da greve</li>
+							<li><input type="checkbox" value="9" id="topico_9" onChange="filtraPorFaseTopico(this)" />Abusividade e práticas antissindicais</li>
+							<li><input type="checkbox" value="10" id="topico_10" onChange="filtraPorFaseTopico(this)" />Judicialização da greve</li>
+							<li><input type="checkbox" value="11" id="topico_11" onChange="filtraPorFaseTopico(this)"/>O encerramento da greve</li>
+							<li><input type="checkbox" value="12" id="topico_12" onChange="filtraPorFaseTopico(this)" />Remuneração durante a greve e compensação dos serviços</li>
+						</ul>
+					</div>
+			</div>
+			
+			<div class="clear"></div>
+
+
+			<div data-bind="foreach: listaLegislacoesFiltradas">
+				<div data-bind="attr: { id: 'legislacao_' + id }">
+					<div data-bind="attr: { id: '!/' + app_item_id }" class="article">
+						<article>
+							<h2 class="legenda">
+								<span data-bind="text: titulo"></span>
+							</h2>
+							<!--                         <div class="fase-tag"> -->
+							<!--                             <h4 data-bind="css: { active: isFaseReinvindicacao, disabled: !isFaseReinvindicacao}">reivindicação</h4> -->
+							<!--                             <h4 data-bind="css: { active: isFaseDeflagracao, disabled: !isFaseDeflagracao}">deflagração</h4> -->
+							<!--                             <h4 data-bind="css: { active: isFaseConducao, disabled: !isFaseConducao}">condução</h4> -->
+							<!--                             <h4 data-bind="css: { active: isFaseEncerramento, disabled: !isFaseEncerramento}">encerramento</h4> -->
+							<!--                             <em> (Se a greve está em alguma dessas etapas, esse item lhe será útil)</em> -->
+							<!--                             <div class="clear"></div> -->
+							<!--                         </div> -->
+
+							<div class="article-main-area col span_2_of_3">
+								<p data-bind="html: texto"></p>
+								<p class="url-relacionada">
+									<a data-bind="attr: {href: link}, text: link" target="_blank"></a>
+								</p>
+							</div>
+
+							<div class="clear"></div>
+						</article>
+					</div>
+				</div>
+			</div>
+			<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style">
+				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+				<a class="addthis_button_tweet"></a> <a
+					class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+			</div>
+			<script type="text/javascript">
+				var addthis_config = {
+					"data_track_addressbar" : true
+				};
+			</script>
+			<script type="text/javascript"
+				src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5381070702e33c8f"></script>
+			<!-- AddThis Button END -->
+			
+			
+
+		</div>
+	</div>
+
+
+
+</div>
+</div>
+<a href="#" class="back-to-top">Voltar ao início</a>
+{% endblock %}

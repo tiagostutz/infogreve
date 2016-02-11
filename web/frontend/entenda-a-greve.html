@@ -1,0 +1,241 @@
+{% extends "template.html" %}
+
+{% block menuselecionado %}menu_entenda_a_greve{% endblock %}
+
+{% block head %}
+
+<meta property="article:author" content="https://www.facebook.com/ruzzarin">
+<meta property="article:publisher" content="https://www.facebook.com/infogreve">
+
+<link rel="stylesheet" type="text/css" href="entenda-a-greve.html.css"/>
+<script type="text/javascript" src="entenda-a-greve.html.js"></script>
+<script type="text/javascript" src="//rdstation-static.s3.amazonaws.com/js/jquery.form/2.02/jquery.form.js"></script>
+
+{% endblock %}
+{% block conteudo %}
+                
+    <div class="content">
+
+        <div class="topicos-listagem-loading">  
+            <div><img src="images/ajax-loader.gif"/></div>
+            <h3 class="legenda" style="color: #AAA; font-size: 18px;">Recuperando tópicos escritos por advogados especialistas em Direito do Servidor Público que apresentam os aspectos mais relevantes da greve de forma clara e prática.</h3>
+        </div>
+
+        <div class="topicos-listagem">
+            <div style="margin-top: 50px">
+                <h3 style="color: #CCC; padding: 0px;" class="legenda">Entenda aqui os principais aspectos acerca do Direito de greve dos servidores públicos e sinta-se preparado. </h3>                        
+            </div>
+
+            <div class="drop_list">
+                <select style="padding: 10px; width: 95%; font-size: 17px" class="select">
+                    <option value="1">Sobre o InfoGreve</option>
+                    <option value="2">O que é a greve?</option>
+                    <option value="3">Greve de servidores para a OIT</option>
+                    <option value="4">Direito de Greve do servidor público</option>
+                    <option value="5">Greve e negociação coletiva</option>
+                    <option value="6">Deflagração da greve</option>
+                    <option value="7">Manutenção dos serviços essenciais</option>
+                    <option value="8">Condução da greve</option>
+                    <option value="9">Abusividade e práticas antissindicais</option>
+                    <option value="10">Judicialização da greve</option>
+                    <option value="11">Encerramento da greve</option>
+                    <option value="12">Remuneração durante a greve e compensação dos serviços</option>
+              </select>
+            </div>
+            <div class="etenda_block">
+                <div class="etenda_block_in">
+                    <div class="search_block">
+                        <div class="search" style="display:none">
+                            <input class="formin" name="" type="text" value="Digite aqui sua busca" onclick="if(this.value=='Digite aqui sua busca'){this.value=''}" onblur="if(this.value==''){this.value='Digite aqui sua busca'}" />
+                                <a class="serching" href="#"><img src="images/search-bg.png" width="31" height="34" alt="img" /></a>
+                                <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="block">
+                        <a href="#!/1">
+                            <div class="box1">
+                                <h2 class="block_text"><span>#1</span> Sobre o InfoGreve?</h2>
+                            </div>
+                        </a>
+                        <a href="#!/2">
+                            <div class="box2">
+                                <h3 class="block_text"><span>#2</span> O que é a greve?</h3>
+                            </div>
+                        </a>
+
+                        <a href="#!/3">
+                            <div class="box3">
+                                <h4 class="block_text"><span>#3</span> Greve de servidores para a OIT</h4>
+                            </div>
+                        </a>
+
+                        <a href="#!/4">
+                            <div class="box4">
+                                <h5 class="block_text"><span>#4</span> Direito de Greve do servidor público</h5>
+                            </div>
+                        </a>
+
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="block">
+                        <a href="#!/5">
+                            <div class="box2 image">
+                                <h3 class="pad_in block_text"><span>#5</span> Greve e negociação coletiva</h3>
+                            </div>
+                        </a>
+                        
+                        <a href="#!/6">
+                            <div class="box1">
+                                <h2 class="block_text"><span>#6</span> Deflagração da greve</h2>
+                            </div>
+                        </a>
+                        
+                        <a href="#!/7">
+                            <div class="box3 blck">
+                                <small><img src="images/img3.jpg" width="64" height="44" alt="img3" /></small>
+                                <h4 class="block_text" style="padding-top: 4px"><span>#7</span> Manutenção dos serviços essenciais</h4>
+                            </div>
+                        </a>
+                        
+                        <a href="#!/8">
+                            <div class="box4 red">
+                                <h5 class="block_text"><span>#8</span> Condução da greve</h5>
+                            </div>
+                        </a>
+                        
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="block last">
+
+                        <a href="#!/9">
+                            <div class="box4 red1">
+                                <h5 class="block_text"><span>#9</span> Abusividade e práticas antissindicais</h5>
+                            </div>
+                        </a>
+                        
+                        <a href="#!/10">
+                            <div class="box3">
+                                <h4 class="block_text"><span>#10</span> Judicialização da greve</h4>
+                            </div>
+                        </a>
+
+                        <a href="#!/11">
+                            <div class="box1 blck1">
+                                <h2 class="block_text"><span>#11</span> Encerramento da greve</h2>
+                            </div>
+                        </a>
+                        
+                        <a href="#!/12">
+                            <div class="box2 speacing">
+                                <small></small>
+                                <h3 class="pads block_text"><span>#12</span> Remuneração durante a greve e compensação dos serviços</h3>
+                            </div>
+                        </a>
+                        
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div data-bind="foreach: listaTopicos">
+                <div data-bind="attr: { id: 'topico_' + app_item_id }">
+                    <div data-bind="attr: { id: '!/' + ordem }" class="article">
+                        <article>
+                            <h2 class="legenda"><span class="number">#<span data-bind="text: ($index() + 1)">1</span></span> <span data-bind="text: titulo"></span></h2>
+                            <div class="fase-tag">
+                                <h4 data-bind="css: { active: isFaseReinvindicacao, disabled: !isFaseReinvindicacao}">reivindicação</h4>
+                                <h4 data-bind="css: { active: isFaseDeflagracao, disabled: !isFaseDeflagracao}">deflagração</h4>
+                                <h4 data-bind="css: { active: isFaseConducao, disabled: !isFaseConducao}">condução</h4>
+                                <h4 data-bind="css: { active: isFaseEncerramento, disabled: !isFaseEncerramento}">encerramento</h4>
+                                <em> (Se a greve está em alguma dessas etapas, esse tópico lhe será útil)</em>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="article-main-area col span_2_of_3">
+                                Por <span data-bind="foreach: autor">
+                                <!--ko if: $index() != 0-->//<!--/ko-->
+                                <strong data-bind="text: title"></strong></span>
+                                <p data-bind="html: texto" style="margin-top: 14px"></p>
+                            </div>
+                            <div class="addon-area col span_1_of_4">
+                                <h2>Perguntas e respostas</h2>
+                                <ul data-bind="foreach: perguntas">
+                                    <li><a data-bind="text: title, attr: {href: '#!/' + $parent.ordem + '-perguntas-' + appItemId}, click: toggle"></a>
+                                    <img src="images/ajax-loader.gif" data-bind="visible: carregando" />
+                                    <div class="resposta" data-bind="visible: visivel">
+                                      <div data-bind="html: resposta"></div>
+                                      <div>
+                                          <button data-bind="click: abrirSaibaMais, visible: !saibaMaisSolicitado()">Saiba mais</button>
+                                          <div data-bind="visible: saibaMaisSolicitado">
+                                            <form data-bind="attr {id: 'conversion-form' + '-' + $parent.ordem + '-' + appItemId}"
+                                            action="https://www.rdstation.com.br/api/1.2/conversions" class="conversion-form" method="POST"> 
+                                                <input type="hidden" name="token_rdstation" value="3d69043302eb44d8bb2a5c3fa34b4bca" />
+            <input type="hidden" name="identificador" value="contato-infogreve-perguntas-respostas" />
+                                                <div>
+                                                    <input name="nome" type="text" placeholder="Seu Nome..."  required/> <br>
+                                            <input name="email_lead" type="email" placeholder="Seu e-mail..." autocomplete="on" required/> <br><div>
+                                                <textarea name="mensagem" style="display:none" data-bind="text: saibaMaisMensagem ">
+                                                        
+                                                    </textarea>
+                                                    <input type="submit" value="Enviar"/>
+                                                </div>
+                                            </form>
+                                            <div class="mensagem-conversao">
+                                                <span>Um advogado lhe enviará um e-mail para saber mais detalhadamente quais as suas dúvidas sobre essa questão.</span>
+                                            </div>
+                                          </div>
+                                        </div> <!-- conversion form -->
+
+
+                                    </div>
+                                    </li>
+                                </ul> 
+                                <h2 style="display: none">Modelos</h2>
+                                <ul data-bind="foreach: modelos">
+                                    <li>Reinvindicação e deflagração.docx</li>
+                                </ul>
+                                <h2 style="display: none">O que diz a lei?</h2>
+                                <ul style="display: none">
+                                    <li><span>3</span> Jurisprudências</li>
+                                    <li><span>2</span> Leis</li>
+                                </ul>
+                                <h2 style="display: ">Notícias sobre esse assunto (<span data-bind="text: noticias().length"></span>)</h2>
+                                <ul style="display: " data-bind="foreach: noticias">
+                                    <li><a data-bind="text: titulo, attr: { href: '/noticias.html#!/' + id}" target="_blank"></a></li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                         <!-- Formulário 'quer saber mais' -->
+                            <div class="formulario-quer-saber-mais">                                    
+                                <h2>Para receber mais informações do especialista nesse assunto, preencha os campos abaixo e ele entrará em contato com você</h2>
+                                <form data-bind="attr {id: 'conversion-form' + '-' + $parent.ordem + '-corpo'}"
+                                        action="https://www.rdstation.com.br/api/1.2/conversions" class="conversion-form" method="POST"> 
+                                    <input type="hidden" name="token_rdstation" value="3d69043302eb44d8bb2a5c3fa34b4bca" />
+                                    <input type="hidden" name="identificador" value="contato-infogreve-topico-especifico" />
+                                    <input name="nome" type="text" placeholder="Seu Nome..."  required/> 
+                                    <input name="email_lead" type="email" placeholder="Seu e-mail..." autocomplete="on" required/> 
+                                    <textarea name="mensagem" style="display:none" data-bind="text: 'Quero saber mais sobre o tópico `' + titulo + '`'"></textarea>
+                                    <input type="submit" value="Enviar"/>
+                                </form>
+                            </div>
+                            <!-- Fim Formulário 'quer saber mais' -->
+                        </article>
+                    </div>
+                </div>
+                      
+            </div>
+            <a href="#" class="back-to-top">Voltar ao início</a>
+        </div>
+    </div> 
+    <input type="hidden" name="c_utmz" id="c_utmz" value="" />
+    <script type="text/javascript">
+        try {
+             document.getElementById("c_utmz").value = read_cookie("__utmz")
+         } catch (err) {}
+    </script>
+
+{% endblock %}

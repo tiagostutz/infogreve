@@ -1,0 +1,159 @@
+    .home_botton ul li a {
+        padding: 0px 10px 20px 10px;
+    }
+    .home_botton  ul li a.active {
+        border-bottom: solid 3px #C8372F;
+    }
+    .navigation ul li a.menu_home {
+        display:none;
+    }
+    span.comming-soon {
+        font-family: helvetica;
+        color: #DDAF75;
+        font-size: 11px;
+    }
+    .nav_section {
+        width: 580px;
+    }
+    .nav {
+        margin: 0 60px 0 0;
+    }
+    .nav.spaceing {
+        width: 160px;
+    }
+
+	.content h2.legenda, .content h3.legenda {
+        font-family: 'Ubuntu', 'sans-serif';
+        font-size: 29px;
+        color: #C8372F;
+        padding: 0px 0 15px 0;
+        margin: 0;
+        font-weight: 400;
+    }
+    .content h3.legenda {
+        font-size: 23px;
+    }
+    .content p {
+        font-family: 'Ubuntu', 'sans-serif';
+        font-size: 16px;
+        color: #000;
+        padding: 0 0 15px 0;
+        margin: 0;
+        line-height: 150%;
+    }
+    .content .number,.sobre_info h2 span{
+        color: #AAA;
+    }
+
+    .box2 h3.pads { padding: 5px 20px;}
+
+    .fase-tag {
+        margin-bottom: 13px;
+    }
+    .fase-tag h4 {
+        font-family: 'Ubuntu', 'sans-serif';
+        font-size: 10px;
+        color: #C8372F;
+        padding: 3px;
+        margin: 0 10px 0 0px;
+        font-weight: 400;
+        float: left;
+        text-transform: uppercase;
+        width: 84px;
+        display: inline-block;
+        text-align: center;
+        font-weight: 800; 
+        background: #EDEDED;
+        -moz-text-shadow: 1px 1px 0px #EFEFEF; 
+        -webkit-text-shadow: 1px 1px 0px #EFEFEF; 
+        text-shadow: 1px 1px 0px #EFEFEF; 
+    }
+    .fase-tag h4.active { 
+        -moz-box-shadow: 0px 1px 3px 0px #BBB inset;
+        -webkit-box-shadow: 0px 1px 3px 0px #BBB inset;
+        box-shadow: 0px 1px 3px 0px #BBB inset;
+    }
+    .fase-tag h4.disabled { 
+        -moz-text-shadow: 1px 1px 0px #EFEFEF;         
+        -webkit-text-shadow: 1px 1px 0px #EFEFEF; 
+        text-shadow: 1px 1px 0px #EFEFEF; 
+        -moz-box-shadow: 0px 1px 1px 0px #BBB;
+        -webkit-box-shadow: 0px 1px 1px 0px #BBB;
+        box-shadow: 0px 1px 1px 0px #BBB;
+        color: #D6D6D6;
+    }
+
+article strong {
+    font-weight: bolder;
+}
+div.article {
+    border-bottom: 1px dotted #AAA; 
+    margin-bottom: 30px; 
+    padding-bottom: 20px;
+}
+
+.addon-area {
+    border-left: 1px solid #DDD;
+    padding-left: 15px;
+    margin-left: 15px;
+}
+.addon-area  h2{
+    font-family: Georgia;
+    color: #CCC;
+    font-size: 21px;
+    font-weight: normal;
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 4px;
+}
+.addon-area ul {
+    margin-left: 15px;
+}
+.addon-area ul li {
+    color: #FFC4C0;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 15px;
+    list-style: circle;
+    line-height: 200%;
+}
+.addon-area ul li a,
+.addon-area ul li a:link,
+.addon-area ul li a:visited,
+.addon-area ul li a:active {
+    color: #C8372F;
+}
+.addon-area ul li a:hover {
+    text-decoration: underline;
+}
+a {
+    cursor: pointer;
+}
+
+.download small {
+    background: url(../images/comes-here-img-pb.png) no-repeat left center;
+    background-position-x: -32px;
+    background-position-y: -11px;
+}
+.download {
+    width: 740px;
+}
+.download a,
+.download a:link,
+.download a:visited,
+.download a:active {
+    color: inherit;
+    font-weight: bold;    
+}
+.download a:hover {
+    text-decoration: underline;
+}
+.info_grave p {
+    padding: 0px;
+    width: 70%;
+    float: left;
+}
+.info_grave div.logo-area {
+    width: 20%;
+    float: left;
+}

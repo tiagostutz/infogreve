@@ -1,0 +1,96 @@
+/* Formulario Emergência */
+.field {
+	margin-bottom: 15px;
+}
+label {
+	margin: 5px 5px 0 0;
+	font-size: 20px;
+	color: #444;
+	display: block;
+	text-align: right;
+}
+
+input[type=text], input[type=url], input[type=email], input[type=password], input[type=tel], 
+textarea.mensagem {
+	  -webkit-appearance: none; 
+	  -moz-appearance: none;
+	  display: block;
+	  margin: 0 5px;
+	  font-size: 18px;
+	  border: 1px solid #bbb;
+	  padding: 10px;
+}
+
+textarea.mensagem {
+	 -webkit-appearance: none; 
+	  -moz-appearance: none;
+	  display: block;
+	  margin: 0 5px;
+	  font-size: 18px;
+	  border: 1px solid #bbb;
+}
+
+.maincontent {
+    padding: 20px;
+    overflow:auto;
+}
+
+input[type=submit] {
+	  -webkit-appearance: none; 
+	  -moz-appearance: none;
+	  display: block;
+	  margin: 0 5px;
+	  height: 60px;
+	  line-height: 40px; 
+	  font-size: 24px;
+	  border: 0px solid #444;
+	  background-color: #EB4747;
+	  color: #fff;
+	  -webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		-webkit-box-shadow: 3px 3px 5px 0px rgba(20, 20, 20, 0.85);
+		-moz-box-shadow:    3px 3px 5px 0px rgba(20, 20, 20, 0.85);
+		box-shadow:         3px 3px 5px 0px rgba(20, 20, 20, 0.85);
+}
+
+input[type=submit]:active {
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+	position: relative;
+	top: 2px;
+	left: 2px;
+}
+.content p.texto_ajuda {
+        margin-top: 10px; 
+        font-size: 18px; 
+        color: #888; 
+        line-height: 24px;
+        font-weight: 200;
+        background: #FAFAFA;
+        margin-bottom: 20px;
+        padding: 5px;
+    }
+ 
+    input[type="submit"].button-busy {
+        background: #444;
+    }
+    input[type="submit"].button-success {
+        background: green;
+    	-webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        top: 0;
+        left: 0;
+    }
+    input[type="submit"].button-error {
+        background: #F7C5C5;
+        color: red;
+    }
+ 
+/* ---------------------------------------------------------*/
+
+@media only screen and (max-width: 480px) {
+	label { text-align: left;}
+}

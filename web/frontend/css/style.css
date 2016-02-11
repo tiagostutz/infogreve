@@ -1,0 +1,203 @@
+/*====================================== reset.css is here ========================================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0;}
+table {	border-collapse:collapse; border-spacing:0;}
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal; font-weight:normal;}
+ol,ul { list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {	font-size:100%;	font-weight:bold;}
+q:before,q:after {content:'';}
+abbr,acronym { border:0;}
+.clear{clear:both; font-size:1px;line-height:1px; display:block; height:0;}
+.clrflt{clear:both;}
+.last	{margin:0 !important;}
+.pad_last{padding:0 !important;}
+.no_bg {background:none !important;}
+/**************************************************************************************/
+a											{color:#000; text-decoration:none; outline:0 none;}
+a:hover										{color:#000;  text-decoration:none;}
+h1											{font-size:24px;}
+h2											{font-size:22px;}
+h3											{font-size:18px;}
+h4											{font-size:16px;}
+h5											{font-size:14px;}
+h6											{font-size:12px;}
+/*----------------------------------------------------------------------------------*/
+html 										{}
+body										{color:#b1b1b1; font-family:"Arial", Verdana, Tahoma; font-size:12px; background:#ffffff;}
+.flt_lt										{float:left; display:inline;}
+.flt_rt										{float:right; display:inline;}
+/* ---------------------------------------------------------------------------------*/
+/* ----------------------- layout ----------*/
+.wrapper									{margin:0 auto; }
+.container									{width:917px; margin:0 auto; }
+/*-------------------------------------------*/
+/* ------------------ HEADER HERE -------------------*/
+.header										{ width:100%; padding:0; border-bottom: solid 2px #d3d3d3;}
+.header_in									{ width:917px; margin:0 auto; }
+.logo										{ margin:0; padding:40px 0 0 0; float:left;  display:inline-block;}
+.header_right								{ width:509px; float:right; display:inline-block;}
+.top_button									{ float:right; width:140px;margin:20px 0 21px 0;}
+.top_button a								{ background:url(../images/emergency-bg.jpg) repeat-x; padding:6px 0 8px 5px;  box-shadow:1px 1px 1px #cfcfcf; display:inline-block;}
+.top_button a span							{ font-family: 'Ubuntu', 'sans-serif'; font-weight:700;  padding:0 13px 0 43px; display:inline-block;  font-size:12px; color:#ffffff; margin:0;  text-align:center; 
+background:url(../images/emargency-img.png) no-repeat 12px center;  text-transform:uppercase;}
+/* ---------------------------------------------------------*/
+/* ------------------------- NAVIGATION HERE ---------------*/
+.nav_section								{ float:right; margin:0; padding:0; width:509px; border-top:solid 1px #7b7b7b;}
+.home_botton								{ float:left; display:inline-block; padding:25px 0 0 10px;}
+.home_botton ul								{ margin:0; padding:0; display:block}
+.home_botton ul li							{ margin:0 0px 0 0; padding:0; display:block;}
+.home_botton ul li a						{ padding:0px;  margin:0; display:inline-block;}
+
+.navigation									{ float:right; display:inline-block;  padding:25px 0 0 0; margin:0 0 -2px 0;}
+.navigation ul								{ margin:0; padding:0; display:inline-block; float:right; }
+.navigation ul li							{ margin:0 20px 0 0; padding:0; display:inline-block; float:left;}
+.navigation ul li a							{ font-family: 'Ubuntu', 'sans-serif';  font-size:13px; color:#666666; padding:0px 10px 18px 10px;  margin:0; display:inline-block;}
+.navigation ul li a:hover,.navigation ul li a.active	{ border-bottom:solid 3px #c8372f; color:#c8372f;}
+.navigation ul li a.pad						{ padding:0 0 18px 10px !important;}
+.navigation ul li a.home					{ border:none; padding:0 13px 0 0;}
+.navigation ul li.home						{ margin:0;}
+	
+.menu										{ font-family:Arial, Helvetica, sans-serif; font-size:20px; font-weight:bold; color:#990000; display:none;}
+.navigation ul li a.res_home				{ display:none;}
+.navigation ul li a.emergency				{ display:none;}
+.navigation ul li a.notice				{ display:none;}
+/* ---------------------------------------------------------*/
+.slide_block								{ width:917px; margin:0 auto 50px; padding:0; position:relative;}
+.slide_block ul								{ margin:0; padding:0; display:inline-block;  }
+.slide_block ul li							{ margin:0 0 0 0; padding:0; display:inline-block; float:left; position:relative;}
+.slider_in									{ width:523px; margin:0; padding:14px 0 20px 18px; background:url(../images/slider-bg.png) repeat; position:absolute; top:70px; left:80px;}
+.slider_in h2								{ font-family: 'Ubuntu', 'sans-serif';  font-size:28px; color:#ffffff; padding:0px 0 0px 0; margin:0; font-weight:400;}
+.slider_in p								{ font-family: 'Ubuntu', 'sans-serif';  font-size:16px; color:#ffffff; padding:0 0 8px 18px; margin:0 0 12px -18px; border-bottom:solid 1px #ffffff; width:506px;}
+.slider_in a								{ font-family: 'Ubuntu', 'sans-serif';  font-weight:700; font-size:13px; color:#ffffff; padding:1px 20px 0 0; margin:0; display:inline-block;
+background:url(../images/arrow1.png) no-repeat right center; text-transform:uppercase;}
+.slider_in a:hover							{ text-decoration:underline;}
+.arrow_block								{ margin:0;}
+.arrow_block a								{ background:url(../images/arrow-left.png) no-repeat left top; width:18px; height:37px;  position:absolute; top:130px; left:15px;}
+
+.greve										{ width:300px; margin:0; padding:14px 0 20px 18px; background:#be3131; display:none;}
+.greve h2									{ font-family: 'Ubuntu', 'sans-serif';  font-size:28px; color:#ffffff; padding:0px 0 0px 0; margin:0; font-weight:400;}
+.greve p									{ font-family: 'Ubuntu', 'sans-serif';  font-size:16px; color:#ffffff; padding:0 0 8px 18px; margin:0 0 12px -18px; border-bottom:solid 1px #ffffff; width:506px;}
+.greve a									{ font-family: 'Ubuntu', 'sans-serif';  font-weight:700; font-size:13px; color:#ffffff; padding:1px 20px 0 0; margin:0; display:inline-block;
+background:url(../images/arrow1.png) no-repeat right center; text-transform:uppercase;}
+
+/* ------------------------ MIAN CONTENT HERE --------------*/
+.main_content								{ width:917px; margin:0 auto; padding:0;}
+.content									{ width:917px; margin:0 auto; padding:0 0 25px 0;}
+.precisando									{ width:290px; padding:0; margin:0 23px 0 0; float:left;}
+.precisando h2								{ font-family: 'Ubuntu', 'sans-serif';  font-size:29px; color:#c8372f; text-align:center; padding:0px 0 15px 0; margin:0; font-weight:400;}
+.precisando p								{ font-family: 'Ubuntu', 'sans-serif';  font-size:16px; color:#000000; text-align:center; padding:0 0 15px 0; margin:0;}
+.precisando p.ital							{ font-family: Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:16px; color:#000000; padding:0 0 14px 0; margin:0;}
+.precisando a								{ font-family: 'Ubuntu', 'sans-serif';  font-weight:700; font-size:13px; color:#000000; padding:0 16px 0 0; margin:0; display:inline-block;
+background:url(../images/arrow.png) no-repeat right center; text-transform:uppercase;}
+.precisando a:hover							{ text-decoration:underline;}
+.download_block								{ width:917px; margin:0 auto; padding:27px 0 25px 0; background:url(../images/gradiant-bg.jpg) repeat-x;}
+.download									{ width:640px; margin:0 auto; padding:0; }
+.download small                             { background:url(../images/comes=here-img.png) no-repeat left center; float:left; margin:0 35px 0 0;}
+.download h3								{ font-family: 'Ubuntu', 'sans-serif';  font-size:28px; color:#c8372f; padding:15px 0 0px 0; margin:0; font-weight:400; float:left;}
+.download span								{ font-family: 'Ubuntu', 'sans-serif';  font-size:18px; color:#c8372f; padding:0 0 0 0; margin:0; display:block; float:left; width:442px;}
+.blog										{ width:917px; margin:0 auto; padding:40px 0 50px 0;  border-bottom: solid 1px #d3d3d3;}
+.blog_left									{ width:470px; float:left; display:inline-block; padding:0; margin:0;}
+.blog_left img								{margin:0; padding:0; display:none;  }
+.blog_left.space							{ width:530px; padding:0;}
+.blog_left h3								{ font-family: 'Ubuntu', 'sans-serif';  font-size:42px; color:#c8372f; padding:0px 0 0px 0; margin:0; font-weight:400;}
+.blog_left h4								{ font-family: 'Ubuntu', 'sans-serif';  font-size:28px; color:#c8372f; padding:0px 0 15px 0; margin:0; font-weight:300;}
+.blog_left p								{ font-family: 'Ubuntu', 'sans-serif';  font-size:19px; color:#555555; font-weight:300; padding:0 0 15px 0; margin:0;}
+.blog_left a								{ font-family: 'Ubuntu', 'sans-serif';  font-weight:700; font-size:15px;  color:#000000; padding:0 16px 0 0; margin:0; display:inline-block;
+background:url(../images/arrow.png) no-repeat right center; text-transform:uppercase;}
+.blog_left a:hover							{ text-decoration:underline;}
+.blog_left p.sizes							{ font-family: 'Ubuntu', 'sans-serif';  font-size:16px; color:#555555; font-weight:300; padding:0 0 15px 0; margin:0; width:530px;}
+.blog_right									{ width:445px; float:right; display:inline-block; padding:0; margin:0;}
+.blog_right small							{ margin:0; padding:0; float:right;}
+.info_grave									{ width:917px; margin:0 auto; padding:45px 0 35px 0px;}
+.info_grave p								{ font-family: 'Ubuntu', 'sans-serif';  font-size:16px; color:#555555; font-weight:300; padding:0 60px 0 60px; margin:0;}
+.info_grave p span							{ font-family: 'Ubuntu', 'sans-serif';  font-size:16px; color:#505050; font-weight:400; padding:0 0 0px 0; margin:0;}
+.info_grave p em							{ font-family: 'Ubuntu', 'sans-serif';  font-size:16px; color:#505050; font-weight:400; padding:0 0 0px 0; margin:0; font-style:italic;}
+.blog.tops									{ padding:33px 0 38px 0;}
+
+.blog_change								{ width:917px; margin:0 auto; border-bottom: 1px solid #D3D3D3; padding:40px 0 50px 0;}
+.blog_change_left small img					{ margin:0 auto; display:block;}
+.blog_change_left							{ float:left; display:inline-block; padding:0; margin:0;}
+.blog_change_right img						{ display:none;}
+
+.blog_change_right							{ width:530px; display:inline-block; padding:0; margin:0; float:right;}
+.blog_change_right h3						{ font-family: 'Ubuntu', 'sans-serif';  font-size:42px; color:#c8372f; padding:0px 0 0px 0; margin:0; font-weight:400;}
+.blog_change_right h4						{ font-family: 'Ubuntu', 'sans-serif';  font-size:28px; color:#c8372f; padding:0px 0 15px 0; margin:0; font-weight:300;}
+.blog_change_right p						{ font-family: 'Ubuntu', 'sans-serif';  font-size:19px; color:#555555; font-weight:300; padding:0 0 15px 0; margin:0;}
+.blog_change_right a						{ font-family: 'Ubuntu', 'sans-serif';  font-weight:700; font-size:15px;  color:#000000; padding:0 16px 0 0; margin:0; display:inline-block;
+background:url(../images/arrow.png) no-repeat right center; text-transform:uppercase;}
+
+/* ---------------------------------------------------------*/
+/* ------------------ FOOTER HERE --------------------------*/
+.footer										{ width:842px; margin:0 auto; background:#000000; padding:45px 0px 0 75px;}
+.footer_logo								{ float:left; margin:0 40px 0 0; padding:0;}
+.footer_nav									{ margin:0; padding:0; float:left; width:607px;}
+.nav										{ width:160px; margin:0 85px 0 0; float:left;}
+.nav ul										{ margin:0 0 0 0; padding:0; display:block; float:left; }
+.nav ul li									{ margin:0 0 0 0; padding:0; display:block;}
+.nav ul li h3								{ font-family: 'Ubuntu', 'sans-serif';  font-size:19px; color:#d3d3d3; padding:0px 0 16px 0; margin:0; font-weight:400;}
+.nav.spaceing								{ width:110px; margin:0;}
+.nav ul li a								{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; font-weight:300; color:#d3d3d3; padding:0; margin:0; display:inline-block; line-height:20px;}
+.nav ul li a:hover							{ text-decoration:underline; color:#ffffff;}
+.footer_down								{ width:840px; margin:0 auto; padding:60px 0 0 0 !important;}
+.copy										{ float:left; display:inline-block;}
+.copy p										{ font-family: 'Ubuntu', 'sans-serif';  font-size:11px; color:#d3d3d3; font-weight:300; padding:0;  margin:0;}
+.footer_icons								{ margin:0 15px 0 0; padding:0; float:right; display:inline-block;}
+.footer_icons ul							{ margin:0 0px 0 0; padding:0; display:inline-block; float:left; }
+.footer_icons ul li							{ margin:0 10px 0 0; padding:0; display:inline-block; float:left;}
+.footer_icons ul li	a						{ margin:0 0 0 0; padding:0; display:inline-block;}
+/* ---------------------------------------------------------*/
+/* ------------------ INNER ONE START HERE --------------------------*/
+.container1									{width:917px; margin:0 auto;}
+.etenda_block								{ width:917px; margin:0 auto; padding:0 0 25px 0; border-bottom:solid 1px #D3D3D3;}
+.etenda_block_in							{ width:816px; margin:0 auto; padding:45px 0 0 0;}
+.search_block								{ width:816px; margin:0 auto 18px; padding:0;}
+.search_block h2							{ font-family: 'Ubuntu', 'sans-serif';  font-size:31px; color:#c8372f; padding:0px 0 0 0; margin:0; font-weight:500; float:left;}
+.search										{width:263px; border:1px solid #c8c8c8; background:#ffffff; float:right;}
+.search .formin								{width:210px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#666666; float:left; border:0 none; padding:10px 10px; font-family: 'Ubuntu', 'sans-serif';  font-size:12px; color:#747474; font-weight:400;}
+.search a.serching							{width:31px; height:34px; margin:0 !important; padding:0 !important; display:block; float:left;}		
+.search a.serching img						{margin:0; padding:0; display:inline-block;}
+.block										{ width:816px; margin:0 auto 10px; padding:0;}
+.box1										{ width:265px; margin:0 10px 0 0; float:left; display:inline-block;  background:#9d2c25; min-height:124px; }
+.box1 h2									{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; color:#ffffff; padding:18px 31px 0 20px; margin:0; font-weight:400;}
+.box1 h2 span								{ font-size:14px; color:#b5b5b5; padding:0; margin:0; font-weight:500;}
+.box1.blck1									{ width:265px; margin:0 10px 0 0; float:left; display:inline-block;  background:#1b1f24; min-height:124px; }
+.box2										{ width:265px; margin:0 10px 0 0; float:left; display:inline-block;  background: url(../images/box2-img.jpg) no-repeat #1c2127; min-height:124px;}
+.box2 h3									{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; color:#ffffff; padding:75px 40px 0 20px; margin:0; font-weight:400;}
+.box2 h3.pad_in								{ padding:88px 40px 0 20px; }
+.box2 h3 span								{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; color:#b5b5b5; padding:0; margin:0; font-weight:500;}
+.box2.image									{ width:265px; margin:0 10px 0 0; float:left; display:inline-block;  background:url(../images/box-img2.jpg) no-repeat #1c2127; min-height:124px;}
+.box2.speacing								{ width:265px; margin:0 0px 0 0; float:left; display:inline-block;  background: url(../images/box-img4.jpg) no-repeat #1c2127; min-height:124px;}
+.box2 small									{ background:url(../images/box-img5.png) no-repeat center top; margin:15px auto 0; padding:0; display:block; width:51px; height:51px;}
+.box2 h3.pads								{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; color:#ffffff; padding:10px 40px 0 55px; margin:0; font-weight:400;}
+.box3										{ width:128px; margin:0 10px 0 0; float:left; display:inline-block;  background:#9d2c25; min-height:124px;}
+.box3 h4									{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; color:#ffffff; padding:16px 15px 0 13px; margin:0; font-weight:400;}
+.box3 h4 span								{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; color:#b5b5b5; padding:0; margin:0; font-weight:500; }
+.box3 small									{ margin:12px auto 0; padding:0; display:block; width:64px;}
+.box3.blck									{ width:128px; margin:0 10px 0 0; float:left; display:inline-block;  background:#1b1f24; min-height:124px;}
+.box4										{ width:128px; margin:0; float:left; display:inline-block;  background:#1b1f24; min-height:124px;}
+.box4 h5									{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; color:#ffffff; padding:16px 9px 0 13px; margin:0; font-weight:400;}
+.box4 h5 span								{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; color:#b5b5b5; padding:0; margin:0; font-weight:500;}
+.box4.red									{ width:128px; margin:0; float:left; display:inline-block;  background:#9d2c25; min-height:124px;}
+.box4.red1									{ width:128px; margin:0 10px 0 0; float:left; display:inline-block;  background:#1b1f24; min-height:124px;}
+.que_grave									{ width:917px; margin:0 auto 30px; border-bottom:solid 1px #D3D3D3;}
+.sobre_info									{ width:816px; padding:35px 0 60px 0; margin:0 auto;}
+.sobre_info h2								{ font-family: 'Ubuntu', 'sans-serif';  font-size:24px; color:#c8372f; padding:0px 0 20px 0; margin:0; font-weight:400;}
+.sobre_info h2 span							{ font-family: 'Ubuntu', 'sans-serif';  font-size:24px; color:#959595; padding:0; margin:0; font-weight:400;}
+.sobre_info p								{ font-family: 'Open Sans', sans-serif;  font-size:13px; color:#000000; padding:0 0 15px 0; margin:0;}
+.sobre_info span							{ font-family: 'Open Sans', sans-serif;  font-size:13px; color:#000000; padding:0 0 15px 0; margin:0;}
+.sobre_info h2.speceing						{ padding:0 0 5px 0;}
+.reivindcacao								{ width:708px; margin:0; padding:0 0 50px 0;}
+.reivindcacao h4							{ font-family: 'Ubuntu', 'sans-serif' ;  font-size:9px; color:#c8372f; padding:5px 0 5px 7px; margin:0 5px 0 0px; font-weight:400; float:left; text-transform:uppercase; width:84px; display:inline-block; background:url(../images/insaid-bg.png) no-repeat;}
+.reivindcacao em							{ font-family: 'Ubuntu', 'sans-serif' ;  font-size:12px; color:#d7d7d7; padding:2px 0 0 0; margin:0; font-weight:300; float:left;}
+.download_block1							{ width:816px; margin:35px auto 0; padding:22px 0 15px 0; background:url(../images/gradiant-bg.jpg) repeat-x;}
+.download1									{ width:635px; margin:0 auto; padding:0; }
+.download1 small                            {  float:left; margin:0 65px 0 0;}
+.download1 h3								{ font-family: 'Ubuntu', 'sans-serif';  font-size:24px; color:#c8372f; padding:0 0 0px 0; margin:0; font-weight:400; float:left;}
+.download1 span								{ font-family: 'Ubuntu', 'sans-serif';  font-size:14px; color:#464646; padding:0 0 0 0; margin:0; display:inline-block; float:left; width:437px;}
+
+.margn										{ display:block;}
+.drop_list									{ width:205px; margin:0 auto; display:none;}
+
+
+/* ---------------------------------------------------------*/
